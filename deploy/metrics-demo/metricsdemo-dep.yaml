@@ -20,7 +20,7 @@ spec:
       containers:
       - name: metricsdemo
         image: quay.io/brice/metrics-demo:v4-subscription-service
-       ports:
+        ports:
         - containerPort: 3000
        
         resources:
