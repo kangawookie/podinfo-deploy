@@ -1,0 +1,1 @@
+{"jobID":"7d5fca2a-cd31-c87d-edf9-5276512203f6","spec":{"type":"policy","cause":{"Message":"","User":"Juan Tran \u003ckangawookie@gmail.com\u003e"},"spec":{"dev:deployment/podinfo":{"add":{"automated":"true"},"remove":null}}},"result":null}
