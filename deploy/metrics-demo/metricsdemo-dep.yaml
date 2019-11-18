@@ -1,0 +1,30 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: metricsdemo
+  namespace: dev
+ 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: metricsdemo
+  template:
+    metadata:
+      labels:
+        app: metricsdemo
+      annotations:
+        prometheus.io/scrape: 'true'
+    spec:
+      containers:
+      - name: metricsdemo
+        image: quay.io/brice/metrics-demo:v4-subscription-service
+       ports:
+        - containerPort: 3000
+       
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
+
