@@ -4,7 +4,9 @@ apiVersion: apps/v1
 metadata:
   name: metricsdemo
   namespace: dev
- 
+
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 3
   selector:
@@ -22,7 +24,7 @@ spec:
         image: quay.io/brice/metrics-demo:v4-subscription-service
         ports:
         - containerPort: 3000
-       
+
         resources:
           requests:
             memory: "32Mi"
